@@ -2849,145 +2849,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3V3"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "+3V3"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+3V3_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3V3_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+5V"
 			(power global)
 			(pin_numbers
@@ -3242,7 +3103,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:VCC"
+		(symbol "power:PWR_FLAG"
 			(power global)
 			(pin_numbers
 				(hide yes)
@@ -3256,8 +3117,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3267,8 +3128,8 @@
 					)
 				)
 			)
-			(property "Value" "VCC"
-				(at 0 3.556 0)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3299,7 +3160,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(property "Description" "Special symbol for telling ERC where power comes from"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3310,7 +3171,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "flag power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3321,46 +3182,8 @@
 					)
 				)
 			)
-			(symbol "VCC_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VCC_1_1"
-				(pin power_in line
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
 					(at 0 0 90)
 					(length 0)
 					(name ""
@@ -3379,6 +3202,20 @@
 					)
 				)
 			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
 			(embedded_fonts no)
 		)
 	)
@@ -3392,6 +3229,16 @@
 		)
 		(uuid "04dee0f0-d5b5-445b-9489-4edfbf5910b5")
 	)
+	(text "DAC"
+		(exclude_from_sim no)
+		(at 102.108 166.116 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "19987039-081e-4e93-9ddc-db26a5e5af99")
+	)
 	(text "IN2\n\n"
 		(exclude_from_sim no)
 		(at 96.012 41.91 0)
@@ -3402,6 +3249,26 @@
 		)
 		(uuid "243336f3-a273-43c2-903a-17963517311b")
 	)
+	(text "DAC"
+		(exclude_from_sim no)
+		(at 102.362 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2fe5959a-f94d-4a1a-86ae-f77f5a9d1dc8")
+	)
+	(text "3.3V\n"
+		(exclude_from_sim no)
+		(at 30.734 28.956 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "34ec23ae-1a46-46c0-9488-f66441947832")
+	)
 	(text "50KHZ LOW PASS\n"
 		(exclude_from_sim no)
 		(at 124.206 33.274 0)
@@ -3411,6 +3278,16 @@
 			)
 		)
 		(uuid "57000507-f591-43f0-a897-177f4fbd9b39")
+	)
+	(text "ADC"
+		(exclude_from_sim no)
+		(at 161.544 30.734 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8a8d8070-a357-4b5e-84ab-4b0a4e54eab6")
 	)
 	(text "IN3\n"
 		(exclude_from_sim no)
@@ -3462,6 +3339,12 @@
 			(justify left bottom)
 		)
 		(uuid "c364973a-9a67-4667-8185-a3a5c6c6cbdf")
+	)
+	(junction
+		(at 31.75 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "037f9464-7b86-495b-b8ab-80bfbe26cefb")
 	)
 	(junction
 		(at 172.72 21.59)
@@ -3524,6 +3407,12 @@
 		(uuid "a4d81b72-f8f8-4e04-a0af-a7a81ff20a79")
 	)
 	(junction
+		(at 29.21 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5ba1e28-f514-47eb-ac6a-f248685acb14")
+	)
+	(junction
 		(at 123.19 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3546,6 +3435,14 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f9f121e1-654f-48a4-9420-ff5397c3e1cd")
+	)
+	(no_connect
+		(at 26.67 26.67)
+		(uuid "15c73768-38e2-4b04-a37c-e643cc822ed1")
+	)
+	(no_connect
+		(at 31.75 26.67)
+		(uuid "a5c8f7e7-8aff-4974-800e-989d609deada")
 	)
 	(no_connect
 		(at 34.29 31.75)
@@ -3693,6 +3590,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 29.21) (xy 170.18 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ec05b5c-0ce8-4062-bdcf-925539f1bf94")
+	)
+	(wire
+		(pts
 			(xy 21.59 72.39) (xy 34.29 72.39)
 		)
 		(stroke
@@ -3760,6 +3667,16 @@
 			(type solid)
 		)
 		(uuid "2df788b2-ce68-49bc-a497-4b6570a17f30")
+	)
+	(wire
+		(pts
+			(xy 25.4 41.91) (xy 29.21 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e652a1b-6d7e-46d0-8ee8-56ac2ba4cc5b")
 	)
 	(wire
 		(pts
@@ -4010,6 +3927,16 @@
 			(type default)
 		)
 		(uuid "5bed90fe-a60d-4fc4-af53-cd3c971309d8")
+	)
+	(wire
+		(pts
+			(xy 170.18 21.59) (xy 172.72 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6235465c-24e0-40a8-a48d-2962eecff5fa")
 	)
 	(wire
 		(pts
@@ -4463,7 +4390,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 142.24) (xy 177.8 147.32)
+			(xy 175.26 142.24) (xy 175.26 148.59)
 		)
 		(stroke
 			(width 0)
@@ -4503,7 +4430,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 142.24) (xy 177.8 142.24)
+			(xy 181.61 142.24) (xy 175.26 142.24)
 		)
 		(stroke
 			(width 0)
@@ -4563,16 +4490,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 153.67) (xy 109.22 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "de7cb6af-9992-4115-8c8b-2145e6fdb09a")
-	)
-	(wire
-		(pts
 			(xy 88.9 138.43) (xy 96.52 138.43)
 		)
 		(stroke
@@ -4610,6 +4527,16 @@
 			(type solid)
 		)
 		(uuid "ec76dcc9-9949-4dda-bd76-046204829cb4")
+	)
+	(wire
+		(pts
+			(xy 114.3 148.59) (xy 114.3 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efa7c3f9-cb65-4dc5-921a-7def29221c81")
 	)
 	(wire
 		(pts
@@ -4711,16 +4638,6 @@
 		)
 		(uuid "11781deb-fe30-477a-b49b-f6aecd479272")
 	)
-	(label "+5V"
-		(at 172.72 16.51 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1c45974e-8298-418f-9375-d64d46f707c1")
-	)
 	(label "2"
 		(at 74.93 72.39 180)
 		(effects
@@ -4792,7 +4709,7 @@
 		(uuid "49d0d493-0d72-45a3-be62-869aed2edbf3")
 	)
 	(label ""
-		(at 180.34 146.05 0)
+		(at 175.26 147.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4841,16 +4758,6 @@
 		)
 		(uuid "5ef66a23-0cf6-4df8-ae1a-5a1df7b4c9c8")
 	)
-	(label "+5V"
-		(at 177.8 147.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "641bdce8-a8c9-4783-ae40-c3d03d7ea484")
-	)
 	(label "CIPO"
 		(at 199.39 39.37 180)
 		(effects
@@ -4860,16 +4767,6 @@
 			(justify right bottom)
 		)
 		(uuid "78c7a82e-ecbb-4215-860c-637930494a2b")
-	)
-	(label "+5V"
-		(at 109.22 113.03 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "86777254-52e2-4e16-a767-a672e04feb27")
 	)
 	(label "LDAC"
 		(at 74.93 59.69 180)
@@ -4990,16 +4887,6 @@
 			(justify right bottom)
 		)
 		(uuid "bbf52cf8-6d97-4499-a9ee-3657cebcdabf")
-	)
-	(label "+5V"
-		(at 109.22 153.67 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c04881c2-98f2-487f-8e44-575669b57cef")
 	)
 	(label "CS0"
 		(at 199.39 44.45 180)
@@ -5202,82 +5089,6 @@
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 31.75 26.67 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000056d71aa9")
-		(property "Reference" "#PWR03"
-			(at 31.75 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 32.131 23.622 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 31.75 26.67 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 31.75 26.67 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 31.75 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "25f7f7e2-1fc6-41d8-a14b-2d2742e98c50")
-		)
-		(instances
-			(project "BE511Lab3point5ArduinoShield"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -6047,6 +5858,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 25.4 41.91 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0f4f1b1f-538c-4238-b9ff-9ba6c65189b7")
+		(property "Reference" "#FLG01"
+			(at 23.495 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 21.59 41.9099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.4 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 25.4 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bb763ffd-dde6-45af-ad29-7ddb390d5fc5")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Analog_DAC:MCP4922-EP")
 		(at 111.76 135.89 0)
 		(unit 1)
@@ -6058,7 +5948,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "16ebf2a4-db89-41f5-8245-db1ff9ed2349")
-		(property "Reference" "DAC"
+		(property "Reference" "U2"
 			(at 134.62 124.3898 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6157,7 +6047,7 @@
 		(instances
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "DAC")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -6253,7 +6143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "276b94ce-c938-4948-bf7f-acc3c78f82a4")
-		(property "Reference" "DAC1"
+		(property "Reference" "U3"
 			(at 134.62 165.0298 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6352,7 +6242,7 @@
 		(instances
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "DAC1")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -6679,6 +6569,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 109.22 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "32ca8da1-3f1b-4c98-8072-f5345d4d610e")
+		(property "Reference" "#PWR018"
+			(at 109.22 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.22 194.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d71e3d2e-ffee-4536-8451-6db7105248b6")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 114.3 72.39 90)
 		(unit 1)
@@ -6837,6 +6805,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 31.75 52.07 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4efbcbca-b886-4024-ae72-323c5a579e5a")
+		(property "Reference" "#FLG02"
+			(at 29.845 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 27.94 52.0699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 31.75 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b66dfac4-6bf9-4663-89e6-0d8558f7d9cd")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 170.18 52.07 0)
 		(unit 1)
@@ -6926,7 +6973,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5bef37b7-438a-4720-9445-9bf60861aadc")
-		(property "Reference" "ADC"
+		(property "Reference" "U1"
 			(at 174.8633 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7026,15 +7073,15 @@
 		(instances
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "ADC")
+					(reference "U1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 26.67 26.67 0)
+		(lib_id "power:+5V")
+		(at 109.22 158.75 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7042,9 +7089,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5ca20c89-dc15-4322-ac65-caf5d0f5fcce")
-		(property "Reference" "#PWR01"
-			(at 26.67 30.48 0)
+		(fields_autoplaced yes)
+		(uuid "5e118a9d-548f-4a4d-88d7-44889498f793")
+		(property "Reference" "#PWR020"
+			(at 113.03 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7054,8 +7102,8 @@
 				)
 			)
 		)
-		(property "Value" "VCC"
-			(at 27.051 23.622 90)
+		(property "Value" "+5V"
+			(at 105.41 158.7499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7066,7 +7114,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 26.67 26.67 0)
+			(at 109.22 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7077,7 +7125,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 26.67 26.67 0)
+			(at 109.22 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7087,8 +7135,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 26.67 26.67 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 109.22 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7099,12 +7147,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6bd03990-0c6f-47aa-a191-9be4dd5032ee")
+			(uuid "d145029f-510b-4746-8ea0-6b64172b2d46")
 		)
 		(instances
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR01")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7183,6 +7231,84 @@
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 114.3 189.23 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63d47752-ab24-40bb-94d0-daa4a42e3c44")
+		(property "Reference" "#PWR021"
+			(at 114.3 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 114.3 194.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 114.3 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3d570db1-f555-4874-8cfd-130195c1e077")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -7592,6 +7718,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 109.22 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d1b199c-0aef-47c0-8276-7f18c1dd973f")
+		(property "Reference" "#PWR017"
+			(at 109.22 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.22 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "911a996a-cb30-42b9-84fb-95ab7f17f1c2")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 125.73 62.23 0)
 		(unit 1)
 		(body_style 1)
@@ -7663,6 +7867,85 @@
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 172.72 16.51 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a7a42f1-8760-480f-8498-c3116c27d8ad")
+		(property "Reference" "#PWR024"
+			(at 176.53 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 168.91 16.5099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 172.72 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50261b85-1ce7-4d4f-80ef-c7a07e6b92fb")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -7741,6 +8024,85 @@
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 114.3 151.13 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "be21744f-a925-4df8-adf9-df39a0940f7d")
+		(property "Reference" "#PWR023"
+			(at 110.49 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 118.11 151.1299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 114.3 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8229a73a-6e91-4de0-b289-c3b1a71dc44b")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -7929,6 +8291,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 109.22 113.03 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6b85578-4c4a-48ea-9130-0684c396393b")
+		(property "Reference" "#PWR022"
+			(at 113.03 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 105.41 113.0299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 109.22 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "74b15631-4869-4186-96c6-ba179406082f")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "5PinScrewTerminal:5PinScrewTerminalDigikey")
 		(at 88.9 41.91 90)
 		(unit 1)
@@ -7940,7 +8381,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e826655d-e9f2-4c80-bd60-10c818433da9")
-		(property "Reference" "5PinScrewTerminalDigikey"
+		(property "Reference" "J5"
 			(at 90.17 30.48 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8012,7 +8453,7 @@
 		(instances
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "5PinScrewTerminalDigikey")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -8093,6 +8534,84 @@
 			(project "BE511Lab3point5ArduinoShield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 175.26 148.59 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f7aa7ae3-6a89-42d2-94f4-4f8ebd98c4e3")
+		(property "Reference" "#PWR019"
+			(at 175.26 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 175.26 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 175.26 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "05f171df-788f-4b4d-acb7-5efb5bcbb699")
+		)
+		(instances
+			(project "BE511Lab3point5ArduinoShield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
